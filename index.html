@@ -39,12 +39,13 @@
 <script src="scripts.min.js?v19"></script>
 
 <script>
-    var pixie = new Pixie({
-    	watermarkText: 'Taoanhdep',
-    	onLoad: function() {
-    		window.postMessage('pixieLoaded', '*');
-    	},
-    });
-</script>
+	var pixie = new Pixie({
+	  onLoad: function() {
+		var state = pixie.getState();
+		  pixie.http().post('', {state: state});
+	  },
+	  baseUrl: 'https://editor.taoanhdep.com/'
+	});
+  </script>
 </body>
 </html>
