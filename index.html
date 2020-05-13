@@ -44,7 +44,19 @@
 		var state = pixie.getState();
 		  pixie.http().post('', {state: state});
 	  },
-	  baseUrl: 'https://editor.taoanhdep.com/'
+	  baseUrl: 'https://editor.taoanhdep.com/',
+	  ui: {
+     themes: [
+         {
+             name: 'My Custom Theme',
+             colors: {
+                 '--be-primary-default': '#007bff',
+                 '--be-accent-default': '#8BC34A',
+                 '--be-accent-lighter': '#AED581',
+             }
+          }
+     ],
+    }
 	});
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
